@@ -31,14 +31,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        
-//        statusItem.length = 1.0
         statusItem.isVisible = true
         constructMenu()
-    }
-    
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
     }
     
     @objc func printQuote(_ sender: Any?) {
@@ -56,16 +50,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         statusItem.menu = menu
     }
-
-    func application(_ sender: NSApplication, openFile filename: String) -> Bool {
-        print(filename)
-        return true
-    }
-    
-    func application(_ sender: NSApplication, openFiles filenames: [String]) {
-        print(filenames)
-    }
-    
 }
 
 extension NSStatusBar {
